@@ -48,23 +48,29 @@ console.log(query)
 
   const sendOrder = async () => {
     // const res = await
+    const currentUser = JSON.parse(localStorage.getItem('eklavyaStudent'))
+    if(currentUser){
 
-    var cartData = {
-      mycart: query,
-      userAddress: address,
-      userState: userstate,
-      userTown: town,
-      userPostal: postal,
-      totalAmount: sendAmount,
-    };
-
-    // console.log("Sending data is", cartData);
-
-    const res = await preOrderPayment(cartData);
-     console.log("Order id arrived from server", cartData);
-
-    // setshowPaymentTest(true);
-    setorderId(res.data.orderId.toUpperCase());
+      var cartData = {
+        mycart: query,
+        userAddress: address,
+        userState: userstate,
+        userTown: town,
+        userPostal: postal,
+        totalAmount: sendAmount,
+        studentId:currentUser.studentId
+      };
+      
+      // console.log("Sending data is", cartData);
+      
+      const res = await preOrderPayment(cartData);
+      console.log("Order id arrived from server", cartData);
+      
+      // setshowPaymentTest(true);
+      setorderId(res.data.orderId.toUpperCase());
+    }else{
+      alert('Login First')
+    }
   };
 
   return (

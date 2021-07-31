@@ -123,47 +123,7 @@ export default function Footer() {
         {/* Scroll Top End */}
       </div>
 
-       <div id="site-main-mobile-menu" className="site-main-mobile-menu">
-        <div className="site-main-mobile-menu-inner">
-            <div className="mobile-menu-header">
-                <div className="mobile-menu-logo">
-                    <a href="/"><img src="http://ekluvya.guru/assets/images/logo/1ekt-logo.png" alt="" /></a>
-                </div>
-                <div className="mobile-menu-close">
-                    <button className="toggle">
-                        <i className="icon-top"></i>
-                        <i className="icon-bottom"></i>
-                    </button>
-                </div>
-            </div>
-            <div className="mobile-menu-content">
-                <nav className="site-mobile-menu">
-                    <ul>
-                        <li className="position-static">
-                            <a href="https://ekluvya.guru"><span className="menu-text">Home</span></a>
-                        </li>
-                        <li>
-                            <a href="/courselist"><span className="menu-text">Classes</span></a>
-                        </li>
-                        <li>
-                            <a href="/subscribe/5fcb8020d145740024b96ead/6"><span className="menu-text">Pricing</span></a>
-                        </li>
-                        <li>
-                            <a href="https://ekluvya.guru/contact-us.html"><span className="menu-text">Contact</span></a>
-                        </li>
-
-                        <li>
-                            <a href="/login"><span className="menu-text">Login</span></a>
-                        </li>
-                        <li>
-                            <a href="/register"><span className="menu-text">Register</span></a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
-
+      
         </div>
     )
 }

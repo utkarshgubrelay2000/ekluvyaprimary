@@ -43,9 +43,7 @@
     /*--
         Off Canvas Function
     -----------------------------------*/
-    $('.header-mobile-menu-toggle, .mobile-menu-close').on('click', '.toggle', function () {
-        $body.toggleClass('mobile-menu-open');
-    });
+  
     $('.site-mobile-menu').on('click', '.menu-toggle', function (e) {
         e.preventDefault();
         var $this = $(this);

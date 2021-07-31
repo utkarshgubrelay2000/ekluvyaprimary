@@ -12,7 +12,7 @@ export default function Home() {
   const [primaryData, setprimaryData] = useState([
     {
       title: "Lower Kindergarten (LKG)",
-      img: "/assets/images/LKG-01.svg", link: { pathname: '/pre-primaryChechout', state: "LKG" }
+      img: "/assets/images/LKG-01.svg", link: { pathname: '/pre-primaryCheckout', state: "LKG" }
     },
     {
       title: "Upper Kindergarten (UKG)",

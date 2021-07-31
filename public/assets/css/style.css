@@ -7080,7 +7080,7 @@ textarea {
 
 .header-light .header-mobile-menu-toggle .toggle:hover i::before, .header-light .mobile-menu-close .toggle:hover i::before, .header-light .fullscreen-search-close .toggle:hover i::before, .header-light .header-mobile-menu-toggle .toggle:hover i::after, .header-light .mobile-menu-close .toggle:hover i::after, .header-light .fullscreen-search-close .toggle:hover i::after {
   background-color: #FFFFFF; }
-
+.mobile
 /* 05.04 Mobile Menu CSS */
 .site-main-mobile-menu {
   position: fixed;
@@ -7134,7 +7134,29 @@ textarea {
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1); }
 
 .mobile-menu-open {
-  overflow: hidden; }
+  overflow: hidden;
+  opacity: 1 !important;
+  position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    
+    background:rgba(0, 0, 0, 0.7);
+transition:all 500ms ease-in-out ;
+
+transform: translateX(0%);
+
+}
+.custom{
+  transform: translateX(100%);
+  background-color: red;
+}
   .mobile-menu-open #page {
     -webkit-transform: translateX(-360px);
     -ms-transform: translateX(-360px);

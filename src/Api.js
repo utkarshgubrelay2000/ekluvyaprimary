@@ -2,15 +2,7 @@ import axios from "axios";
 
 const API_URL = "http://localhost:4500";
 
-export const fetchClasses = async () => {
-  const res = await axios.get(`${API_URL}/fetchClasses`);
-  return res;
-};
 
-export const getBundleForClass = async (classId) => {
-  const res = await axios.get(`${API_URL}/getBundleForClass/${classId}`);
-  return res;
-};
 
 export const sendToAirPay = async () => {
   const res = await axios.post(`${API_URL}/sendtoairpay`, {
@@ -27,15 +19,7 @@ export const sendToAirPay = async () => {
   return res;
 };
 
-export const responseFromAirPay = async () => {
-  const res = await axios.post(`${API_URL}/responsefromairpay`, {});
-  return res;
-};
 
-export const getSubjectDetailById = async (subjectId) => {
-  const res = await axios.get(`${API_URL}/getSubjectById/${subjectId}`);
-  return res;
-};
 
 export const checkEmailExists = async (emailId, phoneNumber) => {
   const res = await axios.get(
@@ -62,29 +46,7 @@ export const preOrderPayment = async (paymentDetails) => {
   const res = await axios.post(`${API_URL}/preOrderPayment`, paymentDetails);
   return res;
 };
-export const fetchStudentSession = async (studentId) => {
-  const res = await axios.get(
-    `${API_URL}/fetchStudentAvailableSession/${studentId}`
-  );
-  return res;
-};
 
-export const scheduleSessions = async (scheduleData) => {
-  const res = await axios.put(`${API_URL}/checkAvailableBalance`, scheduleData);
-  return res;
-};
-
-export const getUpcomingSessionsByStudentId = async (studentId) => {
-  const res = await axios.get(`${API_URL}/fetchStudentSession/${studentId}`);
-  return res;
-};
-
-export const getStudentLeftSessionByClass = async (studentId, classID) => {
-  const res = await axios.get(
-    `${API_URL}/getStudentLeftSessionByClass/${studentId}/${classID}`
-  );
-  return res;
-};
 
 
 

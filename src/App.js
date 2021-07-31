@@ -24,7 +24,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
-          <Route exact path="/pre-primaryChechout" component={Checkout} />
+          <Route exact path="/pre-primaryCheckout" component={Checkout} />
           <Route exact path="/paymentsuccessfull" component={PaymentSuccessfull} />
           <Route exact path="/contact" component={Contact} />
           {/* <Switch>
