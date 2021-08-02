@@ -29,7 +29,10 @@ console.log(query)
   const [address, setAddress] = useState("");
   const [town, setTown] = useState("");
   const [userstate, setState] = useState("");
-  const [postal, setPostal] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [fname, setfName] = useState("");
+  const [lname, setlName] = useState("");
   const [showPaymentModal, setshowPaymentModal] = useState(false);
   const [orderId, setorderId] = useState(null);
 
@@ -48,17 +51,17 @@ console.log(query)
 
   const sendOrder = async () => {
     // const res = await
-    const currentUser = JSON.parse(localStorage.getItem('eklavyaStudent'))
-    if(currentUser){
-
+  
       var cartData = {
         className: query.state,
         userAddress: address,
-        userState: userstate,
         userTown: town,
-        userPostal: postal,
+        email:email ,
+        lname:lname ,
+        fname:fname ,
+        phone:phone ,
         totalAmount: sendAmount,
-        studentId:currentUser.studentId
+    
       };
       
       console.log("Sending data is", cartData);
@@ -68,9 +71,7 @@ console.log(query)
       
       // setshowPaymentTest(true);
       setorderId(res.data.orderId.toUpperCase());
-    }else{
-      alert('Login First')
-    }
+    
   };
 
   return (
@@ -122,15 +123,14 @@ console.log(query)
                                 onChange={(e) => setAddress(e.target.value)}
                               />
                             </div>
+                       
                             <div className="col-md-6 col-12 mb-10">
-                              <label>Country*</label>
-                              <select>
-                                <option>India</option>
-                                <option>Bangladesh</option>
-                                <option>China</option>
-                                <option>country</option>
-
-                                <option>Japan</option>
+                              <label>Course</label>
+                              <select defaultValue={query.state} onChange={(e)=>setnameOfClass(e.target.value)}>
+                                <option value={'UKG'}>UKG</option>
+                                <option value={'Nursery'}>Nursery</option>
+                                <option value={'LKG'}>LKG</option>
+                              
                               </select>
                             </div>
                             <div className="col-md-6 col-12 mb-10">
@@ -143,22 +143,40 @@ console.log(query)
                               />
                             </div>
                             <div className="col-md-6 col-12 mb-10">
-                              <label required>State*</label>
+                              <label required>First name</label>
                               <input
                                 type="text"
-                                placeholder="State"
-                                onChange={(e) => setState(e.target.value)}
+                                placeholder="First Name"
+                                onChange={(e) => setfName(e.target.value)}
+                              />
+                            </div>
+                        
+                            <div className="col-md-6 col-12 mb-10">
+                              <label required>Last name</label>
+                              <input
+                                type="text"
+                                placeholder="Last Name"
+                                onChange={(e) => setlName(e.target.value)}
                               />
                             </div>
                             <div className="col-md-6 col-12 mb-10">
-                              <label required>Postal Code*</label>
+                              <label required>Phone</label>
                               <input
                                 type="text"
-                                placeholder="Zip Code"
-                                onChange={(e) => setPostal(e.target.value)}
+                                placeholder="Last Name"
+                                onChange={(e) => setPhone(e.target.value)}
                               />
                             </div>
-                          </div>
+                   
+                            <div className="col-md-6 col-12 mb-10">
+                              <label required>Email</label>
+                              <input
+                                type="text"
+                                placeholder="Last Name"
+                                onChange={(e) => setEmail(e.target.value)}
+                              />
+                            </div>
+                       </div>
                         </div>
 
                       </div>
@@ -220,7 +238,11 @@ console.log(query)
                                 orderId={orderId}
                                 address={address}
                                 town={town}
-                                postal={postal}
+                                fname={fname}
+                                lname={lname}
+                                course={nameOfClass}
+                                email={email}
+                                phone={phone}
                                 userstate={userstate}
                               />
                             )}

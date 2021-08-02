@@ -6,7 +6,7 @@ var md5 = require("md5");
 var sha256 = require("sha256");
 var dateformat = require("dateformat");
 
-export default function PaymentTest({ showPaymentModal, totalAmount,orderId,address,town,postal,userstate }) {
+export default function PaymentTest({ showPaymentModal, totalAmount,orderId,course,fname,lname,email,phone,address,town }) {
   // var sendAmount = Math.round((totalAmount/100)*18) ;
   // alert("amount is ",sendAmount)
   const currentUser = JSON.parse(localStorage.getItem('eklavyaStudent'))
@@ -31,17 +31,17 @@ export default function PaymentTest({ showPaymentModal, totalAmount,orderId,addr
 
   var req = {
     body: {
-      buyerEmail: "test@gmail.com",
-      buyerFirstName: currentUser.name,
-      buyerLastName: "test",
+      buyerEmail: email,
+      buyerFirstName: fname,
+      buyerLastName: lname,
       buyerAddress: address,
       buyerCity:  town,
-      buyerState: userstate,
+    
       buyerCountry: "india",
       amount: totalAmount,
       orderid: orderId,
-      buyerPhone: "1234567890",
-      buyerPinCode: postal,
+      buyerPhone: phone,
+    
     },
   };
 
@@ -59,7 +59,8 @@ console.log(totalAmount)
       req.body.buyerLastName +
       req.body.buyerAddress +
       req.body.buyerCity +
-      req.body.buyerState +
+     
+   
       req.body.buyerCountry +
       req.body.amount +
       req.body.orderid;
@@ -116,11 +117,7 @@ console.log(totalAmount)
             name="buyerAddress"
             defaultValue={req.body.buyerAddress}
           />
-          <input
-            type="hidden"
-            name="buyerState"
-            defaultValue={req.body.buyerState}
-          />
+       
           <input
             type="hidden"
             name="buyerCountry"

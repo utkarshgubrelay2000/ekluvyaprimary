@@ -106,18 +106,7 @@ const logoutHandler=()=>{
                         <div className="col-xl-3 col-auto">
                             <div className="header-right">
                                 <div className="inner">
-                                    <div className="header-social d-none d-sm-flex">
-                                    {!isUser?<>
-               
-                   <a href="/login"><span className="menu-text">Login</span></a>
-               
-               
-                   <a href="/register"><span className="menu-text">Register</span></a>
-               
-        </>:    
-                   <a onClick={logoutHandler}><span className="menu-text">Logout</span></a>
-                 }
-                                    </div>
+                                   
                                     <div className="header-mobile-menu-toggle d-xl-none ml-sm-2">
                                         <button className="toggle" onClick={()=>openHamburger()}>
                                             <i className="icon-top"></i>

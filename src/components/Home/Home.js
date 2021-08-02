@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { fetchClasses } from "../../Api";
 import { useHistory } from 'react-router-dom'
 export default function Home() {
-  const [isUser,setIsUser]=useState(null)
+  const [isUser,setIsUser]=useState(true)
   const [primaryData, setprimaryData] = useState([
     {
       title: "Lower Kindergarten (LKG)",
@@ -16,21 +16,16 @@ export default function Home() {
     },
     {
       title: "Upper Kindergarten (UKG)",
-      img: "/assets/images/UKG-01.svg", link: { pathname: 
-        '/pre-primaryChechout', state: "UKG" }
+      img: "/assets/images/UKG-01.svg", link: { pathname:  '/pre-primaryCheckout', state: "UKG" }
     },
     {
       title: "Nursery",
       img: "/assets/images/UKG-01.svg", link: { pathname: 
-        '/pre-primaryChechout', state: "Nursery" }
+        '/pre-primaryCheckout', state: "Nursery" }
     },
   ]);
   let history = useHistory()
- useEffect(()=>{
-   const currentUser = JSON.parse(localStorage.getItem('eklavyaStudent'))
-   console.log(currentUser)
-setIsUser(currentUser)
- },[0])
+
   return (
     <Layout>
       <div id="page" className="section">
@@ -91,7 +86,7 @@ setIsUser(currentUser)
                     <div className="content-courses-row">
                       {primaryData.map(classes=>{return(    
                       <div className="course-card">
-                        <p>{classes.name}</p>
+                        <p>{classes.title}</p>
                         <div className="card-image">
                           <img src={classes.img} alt="course_card_image" className="course-image" />
                         </div>
