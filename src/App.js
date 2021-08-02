@@ -27,6 +27,7 @@ function App() {
           <Route exact path="/pre-primaryCheckout" component={Checkout} />
           <Route exact path="/paymentsuccessfull" component={PaymentSuccessfull} />
           <Route exact path="/contact" component={Contact} />
+          
           {/* <Switch>
             <Route exact path="/Classes" component={Classes} />
 
@@ -70,7 +71,6 @@ function App() {
             <Route exact path="/payment" component={Payment} />
 
             <Route exact path="/createmeeting" component={Classes} />
-            <Route exact path="/forgotpassword" component={ForgotPassword} />
           </Switch>
 
          */}

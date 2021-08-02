@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "https://ekluvya-user.herokuapp.com/";
+const API_URL = "https://ekluvya-user.herokuapp.com";
 
 
 

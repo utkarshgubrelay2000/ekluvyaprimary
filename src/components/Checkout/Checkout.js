@@ -52,7 +52,7 @@ console.log(query)
     if(currentUser){
 
       var cartData = {
-        mycart: query,
+        className: query.state,
         userAddress: address,
         userState: userstate,
         userTown: town,
@@ -61,7 +61,7 @@ console.log(query)
         studentId:currentUser.studentId
       };
       
-      // console.log("Sending data is", cartData);
+      console.log("Sending data is", cartData);
       
       const res = await preOrderPayment(cartData);
       console.log("Order id arrived from server", cartData);
