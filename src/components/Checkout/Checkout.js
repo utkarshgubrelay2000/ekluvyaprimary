@@ -29,6 +29,8 @@ console.log(query)
   const [address, setAddress] = useState("");
   const [town, setTown] = useState("");
   const [userstate, setState] = useState("");
+
+  const [pinCode, setpinCode] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [fname, setfName] = useState("");
@@ -57,6 +59,8 @@ console.log(query)
         userAddress: address,
         userTown: town,
         email:email ,
+        state:userstate ,
+        pinCode:pinCode ,
         lname:lname ,
         fname:fname ,
         phone:phone ,
@@ -123,7 +127,31 @@ console.log(query)
                                 onChange={(e) => setAddress(e.target.value)}
                               />
                             </div>
-                       
+                            <div className="col-md-6 col-12 mb-10">
+                              <label required>City/Town</label>
+                              <input
+                                type="text"
+                                placeholder="City"
+                                onChange={(e) => setTown(e.target.value)}
+                              />
+                            </div>
+                            <div className="col-md-6 col-12 mb-10">
+                              <label required>State</label>
+                              <input
+                                type="text"
+                                placeholder="State"
+                                onChange={(e) => setState(e.target.value)}
+                              />
+                            </div>
+                            <div className="col-md-6 col-12 mb-10">
+                              <label required>PinCode</label>
+                              <input
+                                type="text"
+                                placeholder="Code"
+                                onChange={(e) => setpinCode(e.target.value)}
+                              />
+                            </div>
+                        
                             <div className="col-md-6 col-12 mb-10">
                               <label>Course</label>
                               <select defaultValue={query.state} onChange={(e)=>setnameOfClass(e.target.value)}>
@@ -132,15 +160,6 @@ console.log(query)
                                 <option value={'LKG'}>LKG</option>
                               
                               </select>
-                            </div>
-                            <div className="col-md-6 col-12 mb-10">
-                              <label>Town/City*</label>
-                              <input
-                                required
-                                type="text"
-                                placeholder="Town/City"
-                                onChange={(e) => setTown(e.target.value)}
-                              />
                             </div>
                             <div className="col-md-6 col-12 mb-10">
                               <label required>First name</label>

@@ -94,7 +94,7 @@ export default function Home() {
                           <div className="course-2">
                             <div className="info arcourse">
                               <div>
-                                <p className="course-price"><strike>₹ 40,000</strike> <span> ₹ 24,999</span> </p>
+                                <p className="course-price"><strike>₹ 40,000</strike> <span> ₹ {Number(24999)+ Number(24999)*.18}</span> </p>
                                 <h3 className="title">(Price Inclusive Tab and study material)</h3>
                               </div>
                               {isUser?
