@@ -42,7 +42,7 @@ console.log(query)
 
   useEffect(() => {
    
-    var temp = Number(Math.round((24999 / 100) * 18)) + Number(24999);
+    var temp =Number(24999);
 
     setsendAmount(temp);
     setnameOfClass(query.state);
@@ -221,15 +221,14 @@ console.log(query)
 
                               <p>
                                 GST Tax
-                                <span>₹ {(24999 / 100) * 18}</span>
+                                <span>18%</span>
                               </p>
 
                               <h4>
                                 Grand Total
                                 <span>
                                   Rs 
-                                  {24999 +
-                                    (24999 / 100) * 18}
+                                  24999 
                                 </span>
                               </h4>
                             </div>
