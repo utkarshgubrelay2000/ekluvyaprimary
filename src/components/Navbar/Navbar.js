@@ -84,8 +84,8 @@ const logoutHandler=()=>{
                         <div className="col-xl-3 col-auto">
                             <div className="header-logo">
                                 <a href="/">
-                                    <img className="dark-logo" src="http://ekluvya.guru/assets/images/logo/1ekt-logo.png" alt="Ekluvya" />
-                                    <img className="light-logo" src="http://ekluvya.guru/assets/images/logo/1ekt-logo.png" alt="Ekluvya" />
+                                    <img className="dark-logo" src="https://res.cloudinary.com/dvu7miswu/image/upload/v1628844530/wticuwvl1kctkhvlw6fg.png" alt="Ekluvya" />
+                                    <img className="light-logo" src="https://res.cloudinary.com/dvu7miswu/image/upload/v1628844530/wticuwvl1kctkhvlw6fg.png" alt="Ekluvya" />
                                 </a>
                             </div>
                         </div>
