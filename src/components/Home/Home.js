@@ -5,7 +5,6 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./Home.css";
 import Layout from "../Layout";
 import { Link } from "react-router-dom";
-import { fetchClasses } from "../../Api";
 import { useHistory } from 'react-router-dom'
 export default function Home() {
   const [isUser,setIsUser]=useState(true)
@@ -25,7 +24,9 @@ export default function Home() {
     },
   ]);
   let history = useHistory()
-
+  const scrollToTop=()=>{
+    document.body.scrollTo(0,0)
+  }
   return (
     <Layout>
       <div id="page" className="section">
@@ -99,7 +100,7 @@ export default function Home() {
                                 <h3 className="title">(Price Inclusive Tab and study material)</h3>
                               </div>
                               {isUser?
-                              <Link to={classes.link}
+                              <Link to={classes.link} onClick={scrollToTop}
                               className='btn btn-primary btn-hover-secondary bk-course' > Book Now</Link>:
                               <Link to='/login'
                               className='btn btn-primary btn-hover-secondary bk-course' > Login</Link>
